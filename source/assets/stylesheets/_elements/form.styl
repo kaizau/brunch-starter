@@ -1,0 +1,105 @@
+//
+// Forms
+// ----------------------------------------------------------------------------
+
+.Field,
+.Fieldset
+  clearfix()
+
+.Field label,
+.Fieldset legend
+  font-size: font.sm
+  font-weight: bold
+
+// Line break instead of display: block
+.Field label,
+.Fieldset legend,
+.Field.text input,
+.Field.textarea textarea,
+.Field.select select
+  clear: both
+  float: left
+
+// Clear floated subfields
+.Fieldset legend
+  width: 100%
+
+// Align label / legend to baseline
+.Fieldset legend,
+.Field.text label,
+.Field.textarea label,
+.Field.select label
+  line-height: 1.35
+  padding-top: (space.line - font.sm * 1.35)
+
+//
+// Fields
+// ----------------------------------------------------------------------------
+
+// Text and Textarea
+_padding-text-input = 4px
+.Field.text,
+.Field.textarea
+  min-height: (space.line * 2)
+
+  input,
+  textarea
+    background: gray.white
+    border: 1px solid color.border
+    border-radius: radius.sm
+    box-shadow(inset 0 0 2px shadow.light)
+    padding: _padding-text-input / 2 4px
+    width: 100%
+
+.Field.textarea
+  min-height: (space.line * 4)
+  textarea
+    min-height: (space.line * 3 - _padding-text-input)
+
+.Field.text.small
+  input
+    width: 20%
+
+.Field.textarea.large
+  min-height: (space.line * 6)
+  textarea
+    min-height: (space.line * 5 - _padding-text-input)
+
+// Select
+.Field.select
+  min-height: (space.line * 2)
+  select
+    width: 100%
+
+// Checkbox and Radio
+.Field.checkbox,
+.Field.radio
+  min-height: space.line
+
+  // Preserve inline alignment
+  input,
+  label
+    clear: none
+    float: none
+
+  label
+    font-weight: normal
+    line-height: 1
+
+//
+// Fieldsets (multiple inline fields)
+// ----------------------------------------------------------------------------
+
+.Fieldset .Field
+  clear: none
+  float: left
+  margin-right: 2%
+
+  &:last-child
+    margin-right: 0
+
+.Field.double .Field
+  width: 49%
+
+.Field.triple .Field
+  width: 32%

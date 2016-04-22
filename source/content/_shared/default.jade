@@ -1,0 +1,34 @@
+doctype html
+html.no-js
+  head
+    meta(charset="utf-8")
+    meta(content="IE=edge" http-equiv="X-UA-Compatible")
+
+    block headfonts
+
+    block headmeta
+      title Title
+      meta(name="description" content="Description")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    block headstyles
+      link(rel='stylesheet' href='DIGEST(/assets/stylesheets/package.css)')
+
+    script.
+      with(document.documentElement){className=className.replace(/\bno-js\b/,'js')}
+    block headscripts
+      script(src='DIGEST(/assets/javascripts/vendor.js)')
+      script(src='DIGEST(/assets/javascripts/package.js)')
+
+  body
+    .Page
+      .PageMain
+        .PageMainInner
+          .PageContent
+            block content
+
+    footer.PageFooter(role='contentinfo')
+      .Section
+        p Footer
+
+    block footscripts

@@ -1,0 +1,52 @@
+//
+// All Buttons
+// ----------------------------------------------------------------------------
+
+// Default
+.Button
+  background: color.background
+  color: color.text
+  border-radius: radius.xs
+  cursor: pointer
+  display: inline-block
+  font-weight: normal
+  font-size: font.md
+  height: space.line * 1.5
+  line-height: space.line
+  padding: (space.line / 4) space.md
+  text-align: center
+  text-decoration: none
+
+  &:hover
+    text-decoration: none
+
+// Inline
+.Button.inline
+  margin-bottom: (space.line / -4)
+  margin-top: (space.line / -4)
+
+// Larger
+.Button.large
+  border-radius: radius.sm
+  height: space.line * 2
+  padding: (space.line / 2) space.lg
+
+//
+// Button Group
+// ----------------------------------------------------------------------------
+
+.ButtonGroup
+  block()
+  clearfix()
+
+  .Button
+    float: left
+    border-radius: 0
+
+    &:first-child
+      border-bottom-left-radius: radius.sm
+      border-top-left-radius: radius.sm
+
+    &:last-child
+      border-bottom-right-radius: radius.sm
+      border-top-right-radius: radius.sm

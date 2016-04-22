@@ -1,0 +1,79 @@
+//
+// Global
+// ----------------------------------------------------------------------------
+
+*
+  box-sizing: border-box
+
+html,
+button,
+input,
+select,
+textarea
+  color: color.text
+
+html
+  font: font.sm / space.line font.default
+
+body
+  background: url('../images/topography.png')
+
+::-moz-selection
+  background: color.selection
+  color: black
+  text-shadow: none
+
+::selection
+  background: color.selection
+  color: black
+  text-shadow: none
+
+//
+// Common Tags
+// ----------------------------------------------------------------------------
+
+heading-properties(size, ratio = 1.2)
+  font-size: size
+  line-height: ceil(size * ratio)
+  total-height = ceil(@line-height / space.line) * space.line
+  total-height = total-height + space.line if (@line-height % space.line)
+  padding-top: (total-height - @line-height)
+
+h1, h2, h3, h4, h5
+  font: normal font.xxl / 1 font.default
+
+h1
+  heading-properties(font.xxl)
+h2
+  heading-properties(font.xl)
+h3
+  heading-properties(font.lg)
+h4
+  heading-properties(font.md)
+h5
+  heading-properties(font.sm)
+  font-weight: bold
+
+a
+  color: color.anchor
+  text-decoration: none
+  &:hover
+    color: lighten(color.anchor, 10%)
+  p &:hover
+    text-decoration: underline
+
+ol,
+ul
+  padding: 0 0 0 space.lg
+
+textarea
+  resize: vertical
+
+audio,
+canvas,
+embed,
+img,
+object,
+progress,
+video
+  max-width: 100%

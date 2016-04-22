@@ -1,0 +1,113 @@
+//
+// Vertical Rhythm
+// ----------------------------------------------------------------------------
+
+$block,
+p, ul, ol,
+pre, blockquote,
+form, table,
+h1, h2, h3, h4, h5
+  margin-top: space.sm
+  margin-bottom: space.sm
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+$block
+  display: block
+
+$inline,
+span, em, strong,
+small, code, sup, sub
+  display: inline
+  line-height: 1
+
+block()
+  @extend $block
+
+inline()
+  @extend $inline
+
+//
+// Sections
+// ----------------------------------------------------------------------------
+
+.Section
+  clearfix()
+  margin: 0 auto
+  max-width: viewport.xl
+  width: 100%
+
+//
+// Sticky Footer
+// ----------------------------------------------------------------------------
+
+html, body, .Page
+  height: 100%
+  width: 100%
+
+.Page
+  display: table
+  height: 100%
+  position: relative
+  table-layout: fixed
+
+.PageMain
+  display: table-row
+  height: 100%
+
+.PageMainInner
+  display: table-cell
+  min-height: 100%
+  padding-bottom: space.line
+
+.PageFooter
+  background: color.background
+  padding: space.line 0
+
+//.PageContent
+
+//
+// Prepositional Phrases
+// ----------------------------------------------------------------------------
+
+.without-break
+  nobr()
+
+.with-center-alignment
+  text-align: center
+
+.with-margins
+  margin: space.line space.md
+
+.with-padding
+  padding: space.line space.md
+
+.with-vertical-margins
+  margin-bottom: space.line
+  margin-top: space.line
+
+.with-vertical-padding
+  padding-bottom: space.line
+  padding-top: space.line
+
+.with-horizontal-margins
+  margin-left: space.md
+  margin-right: space.md
+
+.with-horizontal-padding
+  padding-left: space.md
+  padding-right: space.md
+
+// Horizontal adjustments for wider viewports
++above(viewport.md)
+  .with-margins,
+  .with-horizontal-margins
+    margin-left: space.lg
+    margin-right: space.lg
+
+  .with-padding,
+  .with-horizontal-padding
+    padding-left: space.lg
+    padding-right: space.lg
