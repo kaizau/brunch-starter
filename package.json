@@ -11,17 +11,16 @@
     "url": ""
   },
   "scripts": {
-    "start": "npm run clean && brunch watch --server",
-    "build": "npm run clean && brunch build --production",
+    "start": "npm run clean && ./node_modules/brunch/bin/brunch watch --server",
+    "build": "npm run clean && ./node_modules/brunch/bin/brunch build --production",
     "clean": "rm -rf public/"
   },
-  "dependencies": {
-    "normalize.css": "^4.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "auto-reload-brunch": "^2.0.0",
     "babel-brunch": "^6.0.2",
     "babel-preset-es2015": "^6.6.0",
+    "brunch": "^2.7.1",
     "clean-css-brunch": "^2.0.0",
     "css-brunch": "^2.0.0",
     "digest-brunch": "^1.5.1",
@@ -29,6 +28,7 @@
     "javascript-brunch": "^2.0.0",
     "jeet": "^6.1.2",
     "jshint-brunch": "^2.0.0",
+    "normalize.css": "^4.1.1",
     "stylus-brunch": "^2.6.0",
     "uglify-js-brunch": "^2.0.0"
   }

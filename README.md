@@ -9,7 +9,7 @@ maps. It integrates JShint running on airbnb/javascript settings.
 
 ```sh
 npm install     # install dependencies
-npm start       # start local dev server
+npm start       # start dev server at http://localhost:3333
 npm run build   # build for production
 ```
 
