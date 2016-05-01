@@ -8,7 +8,7 @@ module.exports =
     watched: [ 'source' ]
 
   conventions:
-    assets: 'source/static'
+    assets: /source\/static/
 
   files:
     javascripts:
