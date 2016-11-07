@@ -14,17 +14,17 @@ module.exports =
     javascripts:
       joinTo:
         'assets/javascripts/package.js': /^source\/assets\/javascripts/
+      #entryPoints:
+        #'source/assets/javascripts/index.js': 'assets/javascripts/index.js'
     stylesheets:
       joinTo:
-        'assets/stylesheets/package.css': 'source/assets/stylesheets/package.styl'
-    templates:
-      joinTo: 'assets/javascripts/package.js'
+        'assets/stylesheets/package.css': /^source\/assets\/stylesheets/
 
   modules:
     nameCleaner: (path) ->
       path.replace('source/assets/javascripts/', '')
-    autoRequire:
-      'assets/javascripts/package.js': ['global.js']
+    #autoRequire:
+      #'assets/javascripts/package.js': ['index.js']
 
   plugins:
     babel:
@@ -38,3 +38,5 @@ module.exports =
       pretty: true
     stylus:
       includeCss: true
+    eslint:
+      pattern: /^source\/assets\/javascripts\/.*\.js/
