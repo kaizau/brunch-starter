@@ -15,6 +15,17 @@ head
 
   script.
     with(document.documentElement){className=className.replace(/\bno-js\b/,'js')}
+
+  <!--[if IE]>
+  script(src='https://cdn.polyfill.io/v2/polyfill.js?features=Element.prototype.classList,Element.prototype.matches,Promise')
+  <![endif]-->
+
   block overrideHeadScripts
+    - if (BRUNCH_ENV === 'production')
+      script.
+        console.log('Running in production!');
+    - else
+      script.
+        console.log('Running in #{BRUNCH_ENV} mode.');
     script(src='DIGEST(/assets/javascripts/package.js)')
     block headScripts

@@ -5,18 +5,17 @@ leverages npm, ES6, Stylus, Jade, etc.
 
 ```sh
 npm install     # install dependencies
-npm start       # start dev server at http://localhost:8080
+npm start       # start dev server at http://localhost:8888
 npm run build   # build for production
 ```
 
 ## Getting Around
 
 ```
-source
-| assets
-| | images
-| | javascripts
-| | stylesheets
+source/
+| images
+| javascripts
+| stylesheets
 | static
 | content
 | | index.jade
@@ -56,7 +55,7 @@ Asset cache-busting is supported via `DIGEST(filename.css)`.
 
 Brunch is opinionated about modules, which is a good thing. Default settings
 wrap all files as Common.JS modules and writes them to **global.js**. You must
-then `require()` files by their filename (relative to
+then `import` files by their filename (relative to
 **source/assets/javascripts**) in order to use them.
 
 ### Stylus

@@ -2,13 +2,18 @@
 // Global
 // ----------------------------------------------------------------------------
 
-*
+html
   box-sizing: border-box
 
-html,
-button,
-input,
-select,
+*
+*:before
+*:after
+  box-sizing: inherit
+
+html
+button
+input
+select
 textarea
   color: color.text
 
@@ -62,18 +67,18 @@ a
   p &:hover
     text-decoration: underline
 
-ol,
+ol
 ul
   padding: 0 0 0 space.lg
 
 textarea
   resize: vertical
 
-audio,
-canvas,
-embed,
-img,
-object,
-progress,
+audio
+canvas
+embed
+img
+object
+progress
 video
   max-width: 100%

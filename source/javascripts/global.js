@@ -1,5 +1,3 @@
-'use strict';
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Boom.
+  console.log('Hello, universe.');
 });
