@@ -35,8 +35,6 @@ config =
   plugins:
     babel:
       presets: ['es2015']
-    copyfilemon:
-      'assets/images': ['source/images']
     digest:
       referenceFiles: /\.(html|js)$/
     jadeStatic:
